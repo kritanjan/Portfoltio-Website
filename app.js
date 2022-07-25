@@ -7,7 +7,7 @@ const path = require('path');
 require('dotenv').config()  //requiring dotenv  
 // remember to add the .env file to the .gitignore
 
-const mongodbPassword = process.env.Mongo_DB_Password      // storing the value of the password in a constant variable  
+const mongodbPassword = process.env.MONGODBPASSWORD      // storing the value of the password in a constant variable  
 
 const portNo = process.env.PORT || 80;    // When we run the app on a server, the hosting platform will itself give us a port number that will be in the .env file, something we can't see pr specify 
  // By the `|| 80` I am telling the server, if there is not port given by the hosting platform, use 80.
