@@ -4,10 +4,16 @@ const mongoose = require('mongoose');
 const path = require('path');
 // const fetch = require('node-fetch');
 
+require('dotenv').config()  //requiring dotenv  
+// remember to add the .env file to the .gitignore
 
-const portNo = 80;
+const mongodbPassword = process.env.Mongo_DB_Password      // storing the value of the password in a constant variable  
 
-//MIDDLEwARES:
+const portNo = process.env.PORT || 80;    // When we run the app on a server, the hosting platform will itself give us a port number that will be in the .env file, something we can't see pr specify 
+ // By the `|| 80` I am telling the server, if there is not port given by the hosting platform, use 80.
+
+
+//MIDDLEWARES:
 app.use(express.json())
 app.use(express.static(path.join(__dirname,"./static")));
 
@@ -16,7 +22,7 @@ main().then(error=>{
     console.log("running");
 }).catch(error=>console.log(error))
 // async function main(){await mongoose.connect('mongodb://localhost:27017/portfolio')}
-async function main(){await mongoose.connect('mongodb+srv://krintanjan101mongo:Oqp4PyX0h4TY5XBZ@myportfolioproject.py7jz.mongodb.net/portfolio?retryWrites=true&w=majority')}
+async function main(){await mongoose.connect(`mongodb+srv://krintanjan101mongo:${mongodbPassword}@myportfolioproject.py7jz.mongodb.net/portfolio?retryWrites=true&w=majority`)}
 
 
 const commentSchema = mongoose.Schema({
