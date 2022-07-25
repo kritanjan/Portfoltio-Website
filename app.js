@@ -12,8 +12,12 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname,"./static")));
 
 //MONGOOSE:
-main().catch(error=>console.log(error))
-async function main(){await mongoose.connect('mongodb://localhost:27017/portfolio')}
+main().then(error=>{
+    console.log("running");
+}).catch(error=>console.log(error))
+// async function main(){await mongoose.connect('mongodb://localhost:27017/portfolio')}
+async function main(){await mongoose.connect('mongodb+srv://krintanjan101mongo:Oqp4PyX0h4TY5XBZ@myportfolioproject.py7jz.mongodb.net/portfolio?retryWrites=true&w=majority')}
+
 
 const commentSchema = mongoose.Schema({
     name: String,
@@ -29,8 +33,8 @@ const Comment = mongoose.model("Comment",commentSchema)
 //APP. ROUTES
 
 app.get('/getComment/:count',(req,res)=>{
-    num = req.params.count;
-    console.log(num);
+    num = req.params.count-1;
+    console.log("From get:   ",num);
     Comment.find(
         {review: true},
         {
@@ -39,15 +43,19 @@ app.get('/getComment/:count',(req,res)=>{
             time: 1
         },
         (error,response)=>{
+            if (error){
+                console.log(error)
+            }else {
             for (;(response[num]);num--){
+                console.log(response)
                 res.send([response[num],response[num-1]])
                 break;
-            }
+            }}
         }) 
 })
 
 app.post('/newComment', (req,res)=>{
-    console.log(req.body.name)
+    console.log("From Post:   ",req.body.name)
     try {
         let obj = new Comment({
             name: req.body.name,
@@ -58,7 +66,7 @@ app.post('/newComment', (req,res)=>{
         obj.save((error,element)=>{
             if (error){
                 console.log(error)
-            } else {console.log(element)}
+            } else {console.log("saved to database\n\n",element)}
         })        
     } catch (error) {
         console.log(error)
