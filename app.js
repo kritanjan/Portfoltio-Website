@@ -24,19 +24,6 @@ const commentSchema = mongoose.Schema({
 
 const Comment = mongoose.model("Comment",commentSchema)
 
-let count = 2;
-
-
-// //RETRIEVING WEATHER DATA
-// const key = '703e6fb84c33bb2899f9280e4abed880'
-// async function getWeather (){
-//     let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=23.8&lon=91.2&appid=${key}&units=metric`);
-//     let data = res.json()
-//     return data;
-// }
-// getWeather().then((data)=>{
-//     console.log(data);
-// })
 
 
 //APP. ROUTES
