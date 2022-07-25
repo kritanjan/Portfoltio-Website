@@ -1,4 +1,3 @@
-console.log("Hello from Engine JS")
 let count = 1;
 
 let commentSubmitHandler = ()=>{
@@ -33,6 +32,8 @@ let commentSubmitHandler = ()=>{
         }
         postComment().then((data)=>{
             alert(data)
+            count = 1
+            loadComments();
         })
 
     }
@@ -44,9 +45,8 @@ function contactSubmitHandler(){
     let nameContact = document.querySelector("#nameContact").value;
     let emailContact = document.querySelector("#emailContact").value;
     let messageContact = document.querySelector("#messageContact").value;
-    // let submitContact = document.querySelector("#submitContact");
     if (nameContact<3){
-        alert("Enter Valid Name")
+        alert("Enter Valid Name")      
     }else if (messageContact<4){
         alert("Enter Valid message")
     }else{
@@ -67,7 +67,6 @@ function contactSubmitHandler(){
         postMessage().then((data)=>{
             alert(data);
             console.log(data);
-            console.log(data)
         })
     }
     
@@ -77,23 +76,33 @@ function contactSubmitHandler(){
 
 function loadComments (){
     async function getData(){
-        res = await fetch(`/getComment/${count}`)
-        data = await res.json()
-        return data
+        res = await fetch(`/getComment/${count}`);
+        data = await res.json();
+        return data;
+        
     }
     getData().then((data)=>{
-        commentDomManipulator(data)
+        commentDomManipulator(data);
         count = count+1;
     })
 }
 
 function commentDomManipulator(data){
-    document.getElementById("commentBy1").innerHTML = data[0].name
-    document.getElementById("timeShower1").innerHTML = timeStringMaker(data[0].time)
-    document.getElementById("comment1").innerHTML = data[0].message
-    document.getElementById("commentBy2").innerHTML = data[1].name
-    document.getElementById("timeShower2").innerHTML = timeStringMaker(data[1].time)
-    document.getElementById("comment2").innerHTML = data[1].message
+    try {
+        document.getElementById("commentBy1").innerHTML = data[0].name
+        document.getElementById("timeShower1").innerHTML = timeStringMaker(data[0].time)
+        document.getElementById("comment1").innerHTML = data[0].message
+    } catch(error){
+        console.log(error)
+    }
+    try {
+        document.getElementById("commentBy2").innerHTML = data[1].name
+        document.getElementById("timeShower2").innerHTML = timeStringMaker(data[1].time)
+        document.getElementById("comment2").innerHTML = data[1].message
+    } catch (error) {
+        console.log("No data to fetch",)
+    }
+    
 }
 let timeStringMaker = (element)=>{return `${element.hours}:00 Hrs, ${element.day} - ${element.month} - ${element.year}`}
 

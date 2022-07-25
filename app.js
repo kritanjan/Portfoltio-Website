@@ -18,8 +18,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname,"./static")));
 
 //MONGOOSE:
-main().then(error=>{
-    console.log("running");
+main().then(error=>{;
 }).catch(error=>console.log(error))
 // async function main(){await mongoose.connect('mongodb://localhost:27017/portfolio')}
 async function main(){await mongoose.connect(`mongodb+srv://krintanjan101mongo:${mongodbPassword}@myportfolioproject.py7jz.mongodb.net/portfolio?retryWrites=true&w=majority`)}
@@ -35,11 +34,15 @@ const commentSchema = mongoose.Schema({
 const Comment = mongoose.model("Comment",commentSchema)
 
 
+let docCount
+Comment.find().count(function(err, count){
+    docCount = count;
+})
 
 //APP. ROUTES
 
 app.get('/getComment/:count',(req,res)=>{
-    num = req.params.count-1;
+    num = req.params.count;
     console.log("From get:   ",num);
     Comment.find(
         {review: true},
@@ -49,15 +52,13 @@ app.get('/getComment/:count',(req,res)=>{
             time: 1
         },
         (error,response)=>{
+
             if (error){
                 console.log(error)
             }else {
-            for (;(response[num]);num--){
-                console.log(response)
-                res.send([response[num],response[num-1]])
-                break;
-            }}
-        }) 
+                res.send([response[docCount-num],response[docCount-num-1]])
+            }
+        })
 })
 
 app.post('/newComment', (req,res)=>{
@@ -77,6 +78,7 @@ app.post('/newComment', (req,res)=>{
     } catch (error) {
         console.log(error)
     }
+    docCount++;
     res.json("Done")
 })
 
