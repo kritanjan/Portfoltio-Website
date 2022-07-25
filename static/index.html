@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+
+    <script src="./engine.js" defer></script>
+    <script src="./style.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +30,8 @@
         <img src="./images/hamburgerIcon.png" alt="M" class="cursorPointer hamImage">
         <div>
             <li class="navLinks normalText contactLink cursorPointer" id="contactLink">Contact</li>
-            <img src="./images/commIcon.png" alt="Contact" class="navLinks contactLink cursorPointer instaWhatsappIcon " id="commIcon">
+            <img src="./images/commIcon.png" alt="Contact" class="navLinks contactLink cursorPointer instaWhatsappIcon "
+                id="commIcon">
         </div>
     </nav>
     <div class="hamContent"></div>
@@ -38,11 +43,13 @@
                 <h4 class="xlargeText largeLineHeight">Hello, This is Krit,</h4>
                 <p class="normalText normalLineHeight">A full time Football enthusiast and a part time</p>
                 <h1 class="xxlargeText">Full-stack Website Developer</h1>
-                <p class="normalText normalLineHeight">Web Developer implementing NodeJS, MongoDB, HTML and CSS to create
+                <p class="normalText normalLineHeight">Web Developer implementing NodeJS, MongoDB, HTML and CSS to
+                    create
                     scalable Web Apps.
                 </p>
                 <p class="normalText normalLineHeight">Persuing electrical engineering.</p>
-                <span class="normalText orangeText normalLineHeight cursorPointer" onclick="showAbout()">Learn More...</span>
+                <span class="normalText orangeText normalLineHeight cursorPointer" onclick="showAbout()">Learn
+                    More...</span>
             </div>
 
 
@@ -58,13 +65,15 @@
                     delight the users.</p>
 
                 <p class="normalText">I've worked with small, agile teams on skunkworks projects for more than a couple
-                    of years. The viewer is encouraged to click the <span class="orangeText cursorPointer" onclick="showWork()">work</span> section to have
+                    of years. The viewer is encouraged to click the <span class="orangeText cursorPointer"
+                        onclick="showWork()">work</span> section to have
                     a brief overview of my works</p>
 
                 <p class="normalText largeLineHeight">Btw that pic on the right is a night walker, and remember
                     Manchester is <span class="blueText">blue</span></p>
 
-                <p>Want to have a chat? <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span></p>
+                <p>Want to have a chat? <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span>
+                </p>
             </div>
 
 
@@ -77,7 +86,8 @@
                             target="_blank"><img src="./images/linker.ico" class="externalLinkIcon" alt="link"></a></h3>
                     <p class="normalText">Under Tripura Power Generation Limited, then</p>
                     <p class="normalText">From 16-11-2020 to 1-12-2020</p>
-                    <p class="normalText moreBottomPadding ">Witnessed, recorded and understood the process of Generation
+                    <p class="normalText moreBottomPadding ">Witnessed, recorded and understood the process of
+                        Generation
                         and Parallel Operation</p>
                 </li>
                 <li class="moreBottomPadding">
@@ -103,7 +113,8 @@
 
 
             <div class="webProjects leftPadding displayNone">
-                <h1 class="normalText orangeText topBottomPadding">Apart from this portfolio website, here's an overview of my other web projects : </h1>
+                <h1 class="normalText orangeText topBottomPadding">Apart from this portfolio website, here's an overview
+                    of my other web projects : </h1>
 
                 <div class="webProjectElements templateDesign">
                     <h2 class="xlargeText webProjectElementHeader ">Microsoft Home Page Clone</h2>
@@ -117,7 +128,8 @@
                 <div class="webProjectElements templateDesign">
                     <h2 class="xlargeText webProjectElementHeader">Geeky Drops</h2>
                     <div class="webProjectElementText normalText">
-                        <p>This is another webpage i created very early in my web Development career. It is an E-commerce website demo that can be used to order wines and beverages.</p>
+                        <p>This is another webpage i created very early in my web Development career. It is an
+                            E-commerce website demo that can be used to order wines and beverages.</p>
                     </div>
                     <img class="webProjectImages " src="./images/geekyDrops.png" alt="Geeky Drops page">
                 </div>
@@ -125,7 +137,8 @@
                 <div class="webProjectElements templateDesign">
                     <h2 class="xlargeText webProjectElementHeader">Kevin de Bryune Wiki</h2>
                     <div class="webProjectElementText normalText">
-                        <p>This is the very first webpage I ever created. It is very simple and is only made up of HTML and CSS. Not even JavaScript.</p>
+                        <p>This is the very first webpage I ever created. It is very simple and is only made up of HTML
+                            and CSS. Not even JavaScript.</p>
                     </div>
                     <img class="webProjectImages " src="./images/kevinDeBryune.png" alt="Kevin de Bryune Web Page">
                 </div>
@@ -137,18 +150,24 @@
 
 
                 <section class="templateDesign ">
-                    <h2 class="normalText largeLineHeight newCommentHeader">Type public comment. If your choose to talk privately, <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span> </h2>
+                    <h2 class="normalText largeLineHeight newCommentHeader">Type public comment. If your choose to talk
+                        privately, <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span>
+                    </h2>
                     <form class="normalText newComment" onsubmit="event.preventDefault()" action="">
                         <label class="labelName" for="name">Enter Your Name</label>
 
-                        <input type="text" class="inputElements nameInput" name="name" id="commentName" placeholder="Your Name">
-                        
-                        <label for="name" class="labelNameAno smallText">Should you choose to enter an anonymous Comment, enter Anonymous</label>
+                        <input type="text" class="inputElements nameInput" name="name" id="commentName"
+                            placeholder="Your Name">
+
+                        <label for="name" class="labelNameAno smallText">Should you choose to enter an anonymous
+                            Comment, enter Anonymous</label>
 
                         <label class="labelComment orangeText" for="comment">Please Enter Your Comment</label>
 
-                        <textarea name="comment" class="inputElements commentTextArea orangeText" id="newComment" cols="30" rows="5" placeholder="Enter your comment here"></textarea>
-                        <div class="commentSubmit"><button id="commentSubmit" class="inputElements cursorPointer orangeText">Submit</button></div>
+                        <textarea name="comment" class="inputElements commentTextArea orangeText" id="newComment"
+                            cols="30" rows="5" placeholder="Enter your comment here"></textarea>
+                        <div class="commentSubmit"><button id="commentSubmit"
+                                class="inputElements cursorPointer orangeText">Submit</button></div>
                     </form>
                 </section>
                 <section>
@@ -156,15 +175,20 @@
                     <div class="templateDesign">
                         <h1 class="normalText orangeText" id="commentBy1">John</h1>
                         <span class="smallText " id="timeShower1">lorem</span>
-                        <p class="normalText commentBox" id="comment1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate molestiae ducimus nemo?</p>
+                        <p class="normalText commentBox" id="comment1">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate
+                            molestiae ducimus nemo?</p>
                     </div>
                     <div class="templateDesign">
                         <h1 class="normalText orangeText" id="commentBy2">Peter</h1>
                         <span class="smallText" id="timeShower2">lorem</span>
-                        <p class=" normalText commentBox" id="comment2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate molestiae ducimus nemo?</p>
+                        <p class=" normalText commentBox" id="comment2">Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate
+                            molestiae ducimus nemo?</p>
                     </div>
                     <div class="moreBottomPadding loadMoreCommentDiv">
-                        <button onsubmit="event.preventDefault()" class="loadMoreComments normalText orangeText" >Load More Comments?</button>
+                        <button onsubmit="event.preventDefault()" class="loadMoreComments normalText orangeText">Load
+                            More Comments?</button>
                     </div>
 
                 </section>
@@ -172,24 +196,31 @@
 
             <div class="contactContent displayNone leftPadding">
                 <li>
-                    <p class="normalText largeLineHeight">You might choose to Email me at <span class="orangeText">kritanjan101@gmail.com</span></p>
+                    <p class="normalText largeLineHeight">You might choose to Email me at <span
+                            class="orangeText">kritanjan101@gmail.com</span></p>
                 </li>
                 <li>
                     <p class="normalText largeLineHeight">Or, Message here</p>
                     <form class="templateDesign contactForm" onsubmit="event.preventDefault()" action="">
                         <label class="labelName" for="nameContact">Enter Your Name: </label>
-                        <input class="nameInput inputElements" type="text" name="nameContact" placeholder="Your Name here" id="nameContact">
+                        <input class="nameInput inputElements" type="text" name="nameContact"
+                            placeholder="Your Name here" id="nameContact">
                         <label class="labelEmail" for="emailContact">Enter Your Email: </label>
-                        <input class="emailInput inputElements" type="email" name="emailContact" placeholder="Your Email here" id="emailContact">
+                        <input class="emailInput inputElements" type="email" name="emailContact"
+                            placeholder="Your Email here" id="emailContact">
                         <label class="labelMessage" for="messageContact">Enter Your Message: </label>
-                        <textarea class="inputElements inputMessage" name="messageContact" id="messageContact" cols="30" rows="10" placeholder="Type your message here"></textarea>
-                        <div class="contactSubmit"><button id="submitContact" class="inputElements cursorPointer orangeText">Submit</button></div>
+                        <textarea class="inputElements inputMessage" name="messageContact" id="messageContact" cols="30"
+                            rows="10" placeholder="Type your message here"></textarea>
+                        <div class="contactSubmit"><button id="submitContact"
+                                class="inputElements cursorPointer orangeText">Submit</button></div>
                     </form>
                 </li>
                 <li class="connectWithMe">
                     <p class="normalText">Connect with me on:</p>
-                    <a href="https://web.whatsapp.com/send?phone=8794399695&text&app_absent=0" target="_blank"><img class="instaWhatsappIcon" src="./images/whatsappIcon.png" alt="Whatsapp"></a>
-                    <a href="https://instagram.com/i__am__kritz?utm_medium=copy_link" target="_blank"><img class="instaWhatsappIcon" src="./images/instagramIcon.png" alt="Instagram"></a>
+                    <a href="https://web.whatsapp.com/send?phone=8794399695&text&app_absent=0" target="_blank"><img
+                            class="instaWhatsappIcon" src="./images/whatsappIcon.png" alt="Whatsapp"></a>
+                    <a href="https://instagram.com/i__am__kritz?utm_medium=copy_link" target="_blank"><img
+                            class="instaWhatsappIcon" src="./images/instagramIcon.png" alt="Instagram"></a>
 
 
                 </li>
@@ -198,8 +229,6 @@
 
     </main>
 </body>
-<script src="./engine.js"></script>
-<script src="./style.js"></script>
 
 </html>
 
