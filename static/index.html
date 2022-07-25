@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span class="backGroundImage"></span>
+    <nav>
+        <div class="navBar">
+            <li class="normalText cursorPointer navLinks homeLink">Home</li>
+            <li class="normalText cursorPointer navLinks aboutLink">About</li>
+            <li class="normalText cursorPointer navLinks workLink">Work</li>
+            <li class="normalText cursorPointer navLinks webLink">Web Projects</li>
+            <li class="normalText cursorPointer navLinks commentLink">Comments</li>
+        </div>
+        <img src="./images/hamburgerIcon.png" alt="M" class="cursorPointer hamImage">
+        <div>
+            <li class="navLinks normalText contactLink cursorPointer" id="contactLink">Contact</li>
+            <img src="./images/commIcon.png" alt="Contact" class="navLinks contactLink cursorPointer instaWhatsappIcon " id="commIcon">
+        </div>
+    </nav>
+    <div class="hamContent"></div>
+    <main class="mainContent">
+
+        <section class="contentCenter">
+
+            <div class="homeContent leftPadding displayNone">
+                <h4 class="xlargeText largeLineHeight">Hello, This is Krit,</h4>
+                <p class="normalText normalLineHeight">A full time Football enthusiast and a part time</p>
+                <h1 class="xxlargeText">Full-stack Website Developer</h1>
+                <p class="normalText normalLineHeight">Web Developer implementing NodeJS, MongoDB, HTML and CSS to create
+                    scalable Web Apps.
+                </p>
+                <p class="normalText normalLineHeight">Persuing electrical engineering.</p>
+                <span class="normalText orangeText normalLineHeight cursorPointer" onclick="showAbout()">Learn More...</span>
+            </div>
+
+
+            <div class="aboutContent leftPadding displayNone">
+                <p class="normalText">Hi, This is Kritanjan Bhattacharjee</p>
+
+                <h2 class="xxlargeText">But you can call me Krit</h2>
+
+                <p class="normalText">Currently persuing electrical engineering at NERIST under the B.Tech program in
+                    third year.Originally from Tripura, India, I am fluent in both English, Bengali and Hindi.</p>
+
+                <p class="normalText largeLineHeight">I strive to create elegant full stack web apps that surprise and
+                    delight the users.</p>
+
+                <p class="normalText">I've worked with small, agile teams on skunkworks projects for more than a couple
+                    of years. The viewer is encouraged to click the <span class="orangeText cursorPointer" onclick="showWork()">work</span> section to have
+                    a brief overview of my works</p>
+
+                <p class="normalText largeLineHeight">Btw that pic on the right is a night walker, and remember
+                    Manchester is <span class="blueText">blue</span></p>
+
+                <p>Want to have a chat? <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span></p>
+            </div>
+
+
+            <div class="workContent leftPadding displayNone">
+                <h1 class="normalText orangeText largeLineHeight">Here's an overview of my works : </h1>
+                <li class="moreBottomPadding">
+                    <p class="normalText">Industrial Vocational Training at</p>
+                    <h3 class="xlargeText">Gas Thermal Power Station, Rookhia <a
+                            href="https://www.tsecl.in/irj/go/km/docs/internet/TRIPURA/webpage/pages/Generation.html"
+                            target="_blank"><img src="./images/linker.ico" class="externalLinkIcon" alt="link"></a></h3>
+                    <p class="normalText">Under Tripura Power Generation Limited, then</p>
+                    <p class="normalText">From 16-11-2020 to 1-12-2020</p>
+                    <p class="normalText moreBottomPadding ">Witnessed, recorded and understood the process of Generation
+                        and Parallel Operation</p>
+                </li>
+                <li class="moreBottomPadding">
+                    <p class="normalText">Industrial Vocational Training at</p>
+                    <h3 class="xlargeText">Gas Thermal Power Station, Baramua <a
+                            href="https://www.tsecl.in/irj/go/km/docs/internet/TRIPURA/webpage/pages/Generation.html"
+                            target="_blank"><img src="./images/linker.ico" class="externalLinkIcon" alt="link"></a></h3>
+                    <p class="normalText">Under Tripura Power Generation Limited, then</p>
+                    <p class="normalText">From 16-11-2020 to 1-12-2020</p>
+                    <p class="normalText moreBottomPadding">Witnessed, recorded and understood the process of Major
+                        Inspection and Overhauling of one of the Gas Turbine Unit</p>
+                </li>
+                <li class="moreBottomPadding">
+                    <p class="normalText">Industrial Training at</p>
+                    <h3 class="xlargeText">"101MW Tripura Gas Based Power Station <a
+                            href="https://neepco.co.in/power-generation/solar-power/monarchak-solar-power-station"
+                            target="_blank"><img src="./images/linker.ico" class="externalLinkIcon" alt="link"></a></h3>
+                    <p class="normalText">From 27-06-2022 to 11-07-2022</p>
+                    <p class="normalText moreBottomPadding">Witnessed, recorded and understood the functioning and
+                        operation of Combined Cycle Gas Turbine Power Station at NEEPCO, Monarchak, Tripura</p>
+                </li>
+            </div>
+
+
+            <div class="webProjects leftPadding displayNone">
+                <h1 class="normalText orangeText topBottomPadding">Apart from this portfolio website, here's an overview of my other web projects : </h1>
+
+                <div class="webProjectElements templateDesign">
+                    <h2 class="xlargeText webProjectElementHeader ">Microsoft Home Page Clone</h2>
+                    <div class="webProjectElementText normalText">
+                        <p>I made this just using HTML, CSS and vanilla JS only.
+                            Hope you linke it.</p>
+                    </div>
+                    <img class="webProjectImages " src="./images/msHomepageClone.png" alt="Microsoft HomePage Clone">
+                </div>
+
+                <div class="webProjectElements templateDesign">
+                    <h2 class="xlargeText webProjectElementHeader">Geeky Drops</h2>
+                    <div class="webProjectElementText normalText">
+                        <p>This is another webpage i created very early in my web Development career. It is an E-commerce website demo that can be used to order wines and beverages.</p>
+                    </div>
+                    <img class="webProjectImages " src="./images/geekyDrops.png" alt="Geeky Drops page">
+                </div>
+
+                <div class="webProjectElements templateDesign">
+                    <h2 class="xlargeText webProjectElementHeader">Kevin de Bryune Wiki</h2>
+                    <div class="webProjectElementText normalText">
+                        <p>This is the very first webpage I ever created. It is very simple and is only made up of HTML and CSS. Not even JavaScript.</p>
+                    </div>
+                    <img class="webProjectImages " src="./images/kevinDeBryune.png" alt="Kevin de Bryune Web Page">
+                </div>
+
+            </div>
+
+
+            <div class="commentContent topPadding leftPadding displayNone">
+
+
+                <section class="templateDesign ">
+                    <h2 class="normalText largeLineHeight newCommentHeader">Type public comment. If your choose to talk privately, <span class="orangeText cursorPointer" onclick="showContact()">Let's Talk</span> </h2>
+                    <form class="normalText newComment" onsubmit="event.preventDefault()" action="">
+                        <label class="labelName" for="name">Enter Your Name</label>
+
+                        <input type="text" class="inputElements nameInput" name="name" id="commentName" placeholder="Your Name">
+                        
+                        <label for="name" class="labelNameAno smallText">Should you choose to enter an anonymous Comment, enter Anonymous</label>
+
+                        <label class="labelComment orangeText" for="comment">Please Enter Your Comment</label>
+
+                        <textarea name="comment" class="inputElements commentTextArea orangeText" id="newComment" cols="30" rows="5" placeholder="Enter your comment here"></textarea>
+                        <div class="commentSubmit"><button id="commentSubmit" class="inputElements cursorPointer orangeText">Submit</button></div>
+                    </form>
+                </section>
+                <section>
+                    <h2 class="normalText largeLineHeight">Previous Comments </h2>
+                    <div class="templateDesign">
+                        <h1 class="normalText orangeText" id="commentBy1">John</h1>
+                        <span class="smallText " id="timeShower1">lorem</span>
+                        <p class="normalText commentBox" id="comment1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate molestiae ducimus nemo?</p>
+                    </div>
+                    <div class="templateDesign">
+                        <h1 class="normalText orangeText" id="commentBy2">Peter</h1>
+                        <span class="smallText" id="timeShower2">lorem</span>
+                        <p class=" normalText commentBox" id="comment2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius magnam consectetur cumque adipisci totam. Dicta esse voluptate molestiae ducimus nemo?</p>
+                    </div>
+                    <div class="moreBottomPadding loadMoreCommentDiv">
+                        <button onsubmit="event.preventDefault()" class="loadMoreComments normalText orangeText" >Load More Comments?</button>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="contactContent displayNone leftPadding">
+                <li>
+                    <p class="normalText largeLineHeight">You might choose to Email me at <span class="orangeText">kritanjan101@gmail.com</span></p>
+                </li>
+                <li>
+                    <p class="normalText largeLineHeight">Or, Message here</p>
+                    <form class="templateDesign contactForm" onsubmit="event.preventDefault()" action="">
+                        <label class="labelName" for="nameContact">Enter Your Name: </label>
+                        <input class="nameInput inputElements" type="text" name="nameContact" placeholder="Your Name here" id="nameContact">
+                        <label class="labelEmail" for="emailContact">Enter Your Email: </label>
+                        <input class="emailInput inputElements" type="email" name="emailContact" placeholder="Your Email here" id="emailContact">
+                        <label class="labelMessage" for="messageContact">Enter Your Message: </label>
+                        <textarea class="inputElements inputMessage" name="messageContact" id="messageContact" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        <div class="contactSubmit"><button id="submitContact" class="inputElements cursorPointer orangeText">Submit</button></div>
+                    </form>
+                </li>
+                <li class="connectWithMe">
+                    <p class="normalText">Connect with me on:</p>
+                    <a href="https://web.whatsapp.com/send?phone=8794399695&text&app_absent=0" target="_blank"><img class="instaWhatsappIcon" src="./images/whatsappIcon.png" alt="Whatsapp"></a>
+                    <a href="https://instagram.com/i__am__kritz?utm_medium=copy_link" target="_blank"><img class="instaWhatsappIcon" src="./images/instagramIcon.png" alt="Instagram"></a>
+
+
+                </li>
+            </div>
+        </section>
+
+    </main>
+</body>
+<script src="./engine.js"></script>
+<script src="./style.js"></script>
+
+</html>
+
+<!-- JS e show content run koira raksi...Idare off koris -->
