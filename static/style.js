@@ -87,4 +87,4 @@ function eatHamBurger(){
     navBar.appendChild(commentLink)
 }
 
-showComments()
+showContact()
