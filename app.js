@@ -30,8 +30,15 @@ const commentSchema = mongoose.Schema({
     time: Object,
     review : Boolean,
 })
+const contactSchema = mongoose.Schema({
+    name: String,
+    email: String,
+    message : String,
+    time: Object
+})
 
 const Comment = mongoose.model("Comment",commentSchema)
+const Contact = mongoose.model("Contact",contactSchema)
 
 
 let docCount
@@ -43,7 +50,6 @@ Comment.find().count(function(err, count){
 
 app.get('/getComment/:count',(req,res)=>{
     num = req.params.count;
-    console.log("From get:   ",num);
     Comment.find(
         {review: true},
         {
@@ -55,6 +61,7 @@ app.get('/getComment/:count',(req,res)=>{
 
             if (error){
                 console.log(error)
+                res.end().status(404)
             }else {
                 res.send([response[docCount-num],response[docCount-num-1]])
             }
@@ -62,7 +69,6 @@ app.get('/getComment/:count',(req,res)=>{
 })
 
 app.post('/newComment', (req,res)=>{
-    console.log("From Post:   ",req.body.name)
     try {
         let obj = new Comment({
             name: req.body.name,
@@ -73,23 +79,35 @@ app.post('/newComment', (req,res)=>{
         obj.save((error,element)=>{
             if (error){
                 console.log(error)
-            } else {console.log("saved to database\n\n",element)}
+            }
         })        
     } catch (error) {
         console.log(error)
     }
     docCount++;
-    res.json("Done")
+    res.json("Your comment was posted")
 })
 
 
 app.post('/newMessage', (req,res)=>{
-    console.log(req.body.name)
-    res.json("Done")
+    try {
+        let obj = new Contact({
+            name: req.body.name,
+            message: req.body.message,
+            email: req.body.email,
+            time: req.body.time,
+        })
+        obj.save((error,element)=>{
+            if (error){
+                console.log(error)
+            } 
+        })        
+    } catch (error) {
+        console.log(error)
+    }
+    res.json("Your message was posted.")
 })
 
 
 //LISTENER
-app.listen(portNo,()=>{
-    console.log(`Server running at http://127.0.0.1:${portNo}`)
-})
+app.listen(portNo,()=>{})
